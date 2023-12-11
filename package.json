@@ -1,7 +1,16 @@
 {
-  "name": "precedent",
+  "name": "next-precedent-tpl",
   "version": "0.1.0",
+  "description": "Next Precedent template forked and modified by TechTastic Solutions.",
+  "license": "UNLICENSED",
   "private": true,
+  "contributors": [
+    {
+      "name": "Wayne Ritchie",
+      "email": "wayne@writchie.dev",
+      "url": "https://writchie.dev"
+    }
+  ],
   "scripts": {
     "dev": "prisma generate && next dev",
     "build": "prisma generate && prisma db push && next build",
@@ -25,7 +34,7 @@
     "clsx": "^2.0.0",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
-    "focus-trap-react": "^10.2.2",
+    "focus-trap-react": "^10.2.3",
     "framer-motion": "^8.5.5",
     "lucide-react": "0.105.0-alpha.4",
     "ms": "^2.1.3",
@@ -40,16 +49,16 @@
     "vaul": "^0.6.8"
   },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.6",
+    "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.10",
-    "@types/ms": "^0.7.32",
+    "@types/ms": "^0.7.34",
     "autoprefixer": "^10.4.16",
     "concurrently": "^7.6.0",
-    "postcss": "^8.4.31",
+    "postcss": "^8.4.32",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.2.8",
     "prisma": "^4.16.2",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.6"
   }
 }
