@@ -25,19 +25,46 @@ export default function NavBar({ session }: { session: Session | null }) {
           <Link href="/" className="flex items-center font-display text-2xl">
             <Image
               src="/logo.png"
-              alt="Precedent logo"
+              alt="TechTastic Solutions logo"
               width="30"
               height="30"
               className="mr-2 rounded-sm"
             ></Image>
-            <p>Precedent</p>
+            <p>TechTastic Solutions</p>
           </Link>
           <div>
+            <button
+              className="square border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
+              onClick={() => {
+                console.log("*** Home Clicked ***");
+              }}
+            >
+              Home
+            </button>
+            &nbsp;
+            <button
+              className="square border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
+              onClick={() => {
+                console.log("*** Contact Clicked ***");
+              }}
+            >
+              Contact
+            </button>
+            &nbsp;
+            <button
+              className="square border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
+              onClick={() => {
+                console.log("*** About Clicked ***");
+              }}
+            >
+              About
+            </button>
+            &nbsp; &nbsp; &nbsp;
             {session ? (
               <UserDropdown session={session} />
             ) : (
               <button
-                className="rounded-full border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
+                className="rounded-min border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
                 onClick={() => setShowSignInModal(true)}
               >
                 Sign In
