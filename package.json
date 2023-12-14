@@ -1,6 +1,6 @@
 {
   "name": "next-precedent-tpl",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Next Precedent template forked and modified by TechTastic Solutions.",
   "license": "UNLICENSED",
   "private": true,
@@ -30,6 +30,7 @@
     "@types/react-dom": "^18.2.17",
     "@vercel/analytics": "^0.1.11",
     "@vercel/og": "^0.0.26",
+    "@vercel/speed-insights": "^1.0.2",
     "classnames": "^2.3.2",
     "clsx": "^2.0.0",
     "eslint": "^8.55.0",
@@ -43,6 +44,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.7",
+    "sharp": "^0.33.0",
     "tailwind-merge": "^1.14.0",
     "typescript": "^5.3.3",
     "use-debounce": "^9.0.4",
