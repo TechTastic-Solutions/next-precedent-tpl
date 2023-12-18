@@ -26,39 +26,33 @@ export default function NavBar({ session }: { session: Session | null }) {
             <Image
               src="/logo.png"
               alt="TechTastic Solutions logo"
-              width="30"
-              height="30"
-              className="mr-2 rounded-sm"
+              width="33"
+              height="33"
+              className="mr-2 rounded-md"
             ></Image>
             <p>TechTastic Solutions</p>
           </Link>
           <div>
-            <button
+            <Link
+              href="/"
               className="square border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
-              onClick={() => {
-                console.log("*** Home Clicked ***");
-              }}
             >
               Home
-            </button>
+            </Link>
             &nbsp;
-            <button
+            <Link
+              href="/contact "
               className="square border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
-              onClick={() => {
-                console.log("*** Contact Clicked ***");
-              }}
             >
               Contact
-            </button>
+            </Link>
             &nbsp;
-            <button
-              className="square border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
-              onClick={() => {
-                console.log("*** About Clicked ***");
-              }}
+            <Link
+              href="/about"
+              className="round items-center border border-black bg-black p-1.5 px-4 font-display text-xl text-white transition-all hover:bg-white hover:text-black"
             >
               About
-            </button>
+            </Link>
             &nbsp; &nbsp; &nbsp;
             {session ? (
               <UserDropdown session={session} />
