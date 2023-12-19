@@ -26,45 +26,36 @@ export default function NavBar({ session }: { session: Session | null }) {
             <Image
               src="/logo.png"
               alt="TechTastic Solutions logo"
-              width="30"
-              height="30"
-              className="mr-2 rounded-sm"
+              width="33"
+              height="33"
+              className="mr-2 rounded-md"
             ></Image>
             <p>TechTastic Solutions</p>
           </Link>
           <div>
-            <button
-              className="square border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
-              onClick={() => {
-                console.log("*** Home Clicked ***");
-              }}
+            <Link
+              href="/"
+              className="mr-1 items-center rounded border border-black bg-black p-1.5 px-4 font-display text-lg text-white transition-all hover:bg-white hover:text-black"
             >
               Home
-            </button>
-            &nbsp;
-            <button
-              className="square border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
-              onClick={() => {
-                console.log("*** Contact Clicked ***");
-              }}
+            </Link>
+            <Link
+              href="/contact "
+              className="mr-1 items-center rounded border border-black bg-black p-1.5 px-4 font-display text-lg text-white transition-all hover:bg-white hover:text-black"
             >
               Contact
-            </button>
-            &nbsp;
-            <button
-              className="square border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
-              onClick={() => {
-                console.log("*** About Clicked ***");
-              }}
+            </Link>
+            <Link
+              href="/about"
+              className="mr-1 items-center rounded border border-black bg-black p-1.5 px-4 font-display text-lg text-white transition-all hover:bg-white hover:text-black"
             >
               About
-            </button>
-            &nbsp; &nbsp; &nbsp;
+            </Link>
             {session ? (
               <UserDropdown session={session} />
             ) : (
               <button
-                className="rounded-min border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
+                className="text-md ml-8 rounded-3xl border border-black bg-black p-1 px-4 text-white transition-all hover:bg-white hover:text-black"
                 onClick={() => setShowSignInModal(true)}
               >
                 Sign In
