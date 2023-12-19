@@ -1,6 +1,6 @@
 {
   "name": "next-precedent-tpl",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Next Precedent template forked and modified by TechTastic Solutions.",
   "license": "UNLICENSED",
   "private": true,
@@ -31,6 +31,7 @@
     "@vercel/speed-insights": "^1.0.2",
     "classnames": "^2.3.2",
     "clsx": "^2.0.0",
+    "contentful": "^10.6.14",
     "focus-trap-react": "^10.2.3",
     "framer-motion": "^8.5.5",
     "lucide-react": "^0.105.0",
