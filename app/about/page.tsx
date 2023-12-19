@@ -53,11 +53,11 @@ export default async function About() {
             animationDuration: "0.5",
           }}
         >
-          &nbsp; …Some content… &nbsp;
+          {` …Some content… `}
         </div>
       </div>
       <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
-        {features.map(({ title, description, demo, large }) => (
+        {features.map(({ title, description, demo, large = false }) => (
           <Card
             key={title}
             title={title}
@@ -77,7 +77,14 @@ export default async function About() {
   );
 }
 
-const features = [
+type tFeatures = {
+  title: string;
+  description: string;
+  large?: boolean;
+  demo?: any;
+};
+
+const features: tFeatures[] = [
   {
     title: "Beautiful, reusable components",
     description:
@@ -107,15 +114,20 @@ const features = [
     ),
   },
   {
-    title: "Built-in Auth + Database",
+    title: "Contentful CMS",
     description:
-      "The template comes with authentication and database via [Auth.js](https://authjs.dev/) + [Prisma](https://prisma.io/)",
+      "Redefining Web CMS with [Contentful](https://contentful.com). A composable content platform to power great digital experiences.",
     demo: (
-      <div className="flex items-center justify-center space-x-20">
-        <Image alt="Auth.js logo" src="/authjs.webp" width={50} height={50} />
-        <Image alt="Prisma logo" src="/prisma.svg" width={50} height={50} />
+      <div className="grid grid-cols-3 gap-5 md:grid-cols-1">
+        <Image
+          src="/contentful.jpg"
+          alt="Contentful CMS"
+          width={600}
+          height={200}
+        />{" "}
       </div>
     ),
+    large: true,
   },
   {
     title: "Hooks, utilities, and more",
@@ -129,6 +141,18 @@ const features = [
         <span className="font-mono font-semibold">nFormatter</span>
         <span className="font-mono font-semibold">capitalize</span>
         <span className="font-mono font-semibold">truncate</span>
+      </div>
+    ),
+    large: true,
+  },
+  {
+    title: "Built-in Auth + Database",
+    description:
+      "The template comes with authentication and database via [Auth.js](https://authjs.dev/) + [Prisma](https://prisma.io/)",
+    demo: (
+      <div className="flex items-center justify-center space-x-20">
+        <Image alt="Auth.js logo" src="/authjs.webp" width={50} height={50} />
+        <Image alt="Prisma logo" src="/prisma.svg" width={50} height={50} />
       </div>
     ),
   },
