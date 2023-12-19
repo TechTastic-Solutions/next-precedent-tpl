@@ -35,30 +35,27 @@ export default function NavBar({ session }: { session: Session | null }) {
           <div>
             <Link
               href="/"
-              className="square border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
+              className="mr-1 items-center rounded border border-black bg-black p-1.5 px-4 font-display text-lg text-white transition-all hover:bg-white hover:text-black"
             >
               Home
             </Link>
-            &nbsp;
             <Link
               href="/contact "
-              className="square border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
+              className="mr-1 items-center rounded border border-black bg-black p-1.5 px-4 font-display text-lg text-white transition-all hover:bg-white hover:text-black"
             >
               Contact
             </Link>
-            &nbsp;
             <Link
               href="/about"
-              className="round items-center border border-black bg-black p-1.5 px-4 font-display text-xl text-white transition-all hover:bg-white hover:text-black"
+              className="mr-1 items-center rounded border border-black bg-black p-1.5 px-4 font-display text-lg text-white transition-all hover:bg-white hover:text-black"
             >
               About
             </Link>
-            &nbsp; &nbsp; &nbsp;
             {session ? (
               <UserDropdown session={session} />
             ) : (
               <button
-                className="rounded-min border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
+                className="text-md ml-8 rounded-3xl border border-black bg-black p-1 px-4 text-white transition-all hover:bg-white hover:text-black"
                 onClick={() => setShowSignInModal(true)}
               >
                 Sign In

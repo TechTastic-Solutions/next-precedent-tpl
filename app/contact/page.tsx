@@ -2,7 +2,7 @@ import Card from "@/components/home/card";
 import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 
-export default async function Home() {
+export default async function Contact() {
   return (
     <>
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
