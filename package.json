@@ -47,6 +47,10 @@
     "vaul": "^0.6.8"
   },
   "devDependencies": {
+    "@contentful/app-scripts": "1.13.2",
+    "@contentful/mimetype": "2.2.28",
+    "@contentful/node-apps-toolkit": "2.8.1",
+    "@contentful/react-apps-toolkit": "1.2.16",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.10",
@@ -63,7 +67,7 @@
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.2.8",
     "prisma": "^4.16.2",
-    "tailwindcss": "^3.3.7",
+    "tailwindcss": "^3.4.0",
     "typescript": "^5.3.3"
   }
 }
